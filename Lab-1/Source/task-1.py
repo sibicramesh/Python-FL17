@@ -1,13 +1,13 @@
 # Word Count Program
 
 # Read input from a file
-inputFile=open("sampleIP.txt","r+")
+inputFile = open("sampleIP.txt", "r+")
 
 # Write output to a file
-outputFile=open("sampleOP.txt","w+")
+outputFile = open("sampleOP.txt", "w+")
 
-# Count array initialization
-count={}
+# Count array declare
+count = {}
 
 # Loop and split each word in the file
 for word in inputFile.read().split():
@@ -17,7 +17,7 @@ for word in inputFile.read().split():
         count[word] += 1
 
 # Output the word and count to a file
-for w,c in count.items():
+for w, c in count.items():
     outputFile.write(w)
     outputFile.write(":\t")
     outputFile.write(str(c))
