@@ -35,7 +35,7 @@ def GuassianNaivebayes():
 # Function to generate multinomial naive bayes
 def MultinomialNaivebayes():
     print("****** MultinomialNaivebayes ******")
-    ds = datasets.load_iris()
+    ds = datasets.load_digits()
     # test and train split
     data_train, data_test, target_train, target_test = train_test_split(ds.data, ds.target, test_size=0.4,
                                                                         random_state=0)
