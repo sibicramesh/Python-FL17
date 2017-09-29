@@ -11,7 +11,8 @@ def GuassianNaivebayes():
     print("****** GuassianNaivebayes ******")
     ds = datasets.load_iris()
     # test and train split
-    data_train, data_test, target_train, target_test = train_test_split(ds.data, ds.target, test_size=0.4, random_state=0)
+    data_train, data_test, target_train, target_test = train_test_split(ds.data, ds.target, test_size=0.4,
+                                                                        random_state=0)
     # fit the model to the data
     model = GaussianNB()
     model.fit(data_test, target_test)
@@ -26,16 +27,18 @@ def GuassianNaivebayes():
     print("****** Confusion Matrix ******")
     print(metrics.confusion_matrix(expected, predicted))
     print("****** Accuracy Score ******")
-    print(metrics.accuracy_score(expected,predicted))
+    print(metrics.accuracy_score(expected, predicted))
     print("****** Cohen Kappa Score ******")
-    print(metrics.cohen_kappa_score(expected,predicted))
+    print(metrics.cohen_kappa_score(expected, predicted))
+
 
 # Function to generate multinomial naive bayes
 def MultinomialNaivebayes():
     print("****** MultinomialNaivebayes ******")
     ds = datasets.load_iris()
     # test and train split
-    data_train, data_test, target_train, target_test = train_test_split(ds.data, ds.target, test_size=0.4, random_state=0)
+    data_train, data_test, target_train, target_test = train_test_split(ds.data, ds.target, test_size=0.4,
+                                                                        random_state=0)
     # fit the model to the data
     model = MultinomialNB()
     model.fit(data_test, target_test)
@@ -50,7 +53,7 @@ def MultinomialNaivebayes():
     print("****** Confusion Matrix ******")
     print(metrics.confusion_matrix(expected, predicted))
     print("****** Accuracy Score ******")
-    print(metrics.accuracy_score(expected,predicted))
+    print(metrics.accuracy_score(expected, predicted))
     print("****** Cohen Kappa Score ******")
     print(metrics.cohen_kappa_score(expected, predicted))
 
