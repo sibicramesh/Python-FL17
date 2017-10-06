@@ -1,4 +1,4 @@
-from nltk import pos_tag, ne_chunk, word_tokenize
+from nltk import pos_tag, ne_chunk
 from nltk.tokenize import sent_tokenize, word_tokenize, wordpunct_tokenize
 from nltk.stem import WordNetLemmatizer, PorterStemmer
 
