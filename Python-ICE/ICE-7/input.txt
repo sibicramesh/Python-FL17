@@ -1,0 +1,5 @@
+The Go language has built-in facilities, as well as library support, for writing concurrent programs. Concurrency refers not only to CPU parallelism, but also to asynchrony: letting slow operations like a database or network-read run while the program does other work, as is common in event-based servers.
+
+The primary concurrency construct is the goroutine, a type of light-weight process. A function call prefixed with the go keyword starts a function in a new goroutine. The language specification does not specify how goroutines should be implemented, but current implementations multiplex a Go process's goroutines onto a smaller set of operating system threads, similar to the scheduling performed in Erlang.[56]:10
+
+While a standard library package featuring most of the classical concurrency control structures (mutex locks, etc.) is available, idiomatic concurrent programs instead prefer channels, which provide send messages between goroutines.[57] Optional buffers store messages in FIFO order and allow sending goroutines to proceed before their messages are received.
